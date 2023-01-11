@@ -34,5 +34,5 @@ CREATE TABLE user (
 );
 -- ENGINE = InnoDB;
 
-INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Davy', 'Mccree', 'davy.mccree@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1'),('Jean', 'Mccree', 'davy.mccree@gmail.com', 'Oslo', '0652658000', '12345', '1', 'monavatar2.png', '2022-10-16 12:12:23', '1'),('Paul', 'Mccree', 'davy.mccree@gmail.com', 'Oslo', '0659815495', '12345', '1', 'monavatar3.png', '2022-10-14 12:12:23', '1'),('Bob', 'Mccree', 'davy.mccree@gmail.com', 'Oslo', '0620326521', '12345', '1', 'monavatar4.png', '2022-10-08 12:12:23', '1');
+INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1'),('Captain', 'America', 'captain.america@gmail.com', 'Oslo', '0652658000', '12345', '1', 'monavatar2.png', '2022-10-16 12:12:23', '1'),('Docteur', 'Strange', 'docteur.strange@example.com', 'Oslo', '0659815495', '12345', '1', 'monavatar3.png', '2022-10-14 12:12:23', '1'),('Tony', 'Stark', 'tony.stark@example.com', 'Oslo', '0620326521', '12345', '1', 'monavatar4.png', '2022-10-08 12:12:23', '1');
 
