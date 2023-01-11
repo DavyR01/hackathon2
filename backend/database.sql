@@ -13,7 +13,7 @@ CREATE TABLE vehicle (
 -- ENGINE = InnoDB;
 );
 
-INSERT INTO vehicle (brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Golf', '308', '150000 km', 'Diesel', 'Lyon', '1', '0')('Audi', 'A7', '150000 km', 'Diesel', 'Lyon', '1', '0')('BMW', 'Serie 3', '150000 km', 'Diesel', 'Lyon', '1', '0');
+INSERT INTO vehicle (brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Golf', '308','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Audi', 'A7','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('BMW', 'Serie 3','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0');
 
 DROP TABLE IF EXISTS user;
 
