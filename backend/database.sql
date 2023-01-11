@@ -4,6 +4,7 @@ CREATE TABLE vehicle (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   brand VARCHAR(80) NOT NULL,
   model VARCHAR(80) NOT NULL,
+  picture VARCHAR(255) NOT NULL,
   mileage VARCHAR(80) NOT NULL,
   technicalData VARCHAR(255) NOT NULL,
   localisation VARCHAR(80) NOT NULL,
@@ -12,7 +13,7 @@ CREATE TABLE vehicle (
 -- ENGINE = InnoDB;
 );
 
-INSERT INTO vehicle (brand, model, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206', '150000 km', 'Diesel', 'Lyon', '1', '0');
+INSERT INTO vehicle (brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Golf', '308','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Audi', 'A7','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('BMW', 'Serie 3','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0');
 
 DROP TABLE IF EXISTS user;
 
@@ -33,5 +34,5 @@ CREATE TABLE user (
 );
 -- ENGINE = InnoDB;
 
-INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Davy', 'Mccree', 'davy.mccree@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar.png', '2022-10-13 12:12:23', '1');
+INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1'),('Captain', 'America', 'captain.america@gmail.com', 'Oslo', '0652658000', '12345', '1', 'monavatar2.png', '2022-10-16 12:12:23', '1'),('Docteur', 'Strange', 'docteur.strange@example.com', 'Oslo', '0659815495', '12345', '1', 'monavatar3.png', '2022-10-14 12:12:23', '1'),('Tony', 'Stark', 'tony.stark@example.com', 'Oslo', '0620326521', '12345', '1', 'monavatar4.png', '2022-10-08 12:12:23', '1');
 
