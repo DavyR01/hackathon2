@@ -9,7 +9,15 @@ module.exports = {
       xl: "1280px",
       xxl: "1500px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        "main-color": "#D6E4E5",
+        "orange-color": "#EB6440",
+      },
+      boxShadow: {
+        1: "10px 10px 20px 0 rgba(50, 0, 50, 0.3)",
+      },
+    },
   },
   plugins: [],
 };
