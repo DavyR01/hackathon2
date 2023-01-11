@@ -34,7 +34,7 @@ const add = (req, res) => {
   models.vehicle
     .insert(vehicle)
     .then(([result]) => {
-      res.location(`/api/articles/${result.insertId}`).sendStatus(201);
+      res.location(`/api/vehicles/${result.insertId}`).sendStatus(201);
     })
     .catch((error) => {
       console.error(error);
