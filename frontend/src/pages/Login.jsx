@@ -41,37 +41,39 @@ function Login() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center relative">
-      <div className="">
-        <h1 className="text-center absolute top-10 left-32">Connectez-vous</h1>
-        <form onSubmit={handleSubmit} className="m-auto mt-5">
-          <div className="mb-3">
-            <p>Adresse e-mail</p>
-            <input
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              placeholder="email"
-              className="form-control border-solid border-black border-2 rounded-lg"
-              id="email"
-            />
-          </div>
-          <div className="mb-3">
-            <p>Mot de passe</p>
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              placeholder="mot de passe"
-              className="form-control border-solid border-black border-2 rounded-lg"
-              id="password"
-            />
-          </div>
-          <button
-            type="submit"
-            className="hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
-          >
-            Connexion
-          </button>
-        </form>
+    <div className="h-screen">
+      <h1 className="text-center mt-5">Connectez-vous</h1>
+      <div className="flex justify-center mt-40">
+        <div className="">
+          <form onSubmit={handleSubmit} className="m-auto mt-5">
+            <div className="mb-3">
+              <p>Adresse e-mail</p>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="email"
+                className="form-control border-solid border-black border-2 rounded-lg h-10"
+                id="email"
+              />
+            </div>
+            <div className="mb-3">
+              <p>Mot de passe</p>
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                placeholder="mot de passe"
+                className="form-control border-solid border-black border-2 rounded-lg h-10"
+                id="password"
+              />
+            </div>
+            <button
+              type="submit"
+              className="hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
+            >
+              Connexion
+            </button>
+          </form>
+        </div>
       </div>
       <div>{errorMessage}</div>
     </div>
