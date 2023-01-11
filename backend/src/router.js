@@ -2,6 +2,13 @@ const express = require("express");
 
 const router = express.Router();
 
+// services d'auth
+/* const {
+  hashPassword,
+  verifyPassword,
+  verifyToken,
+} = require("./services/auth"); */
+
 const itemControllers = require("./controllers/itemControllers");
 
 router.get("/items", itemControllers.browse);
