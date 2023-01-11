@@ -9,12 +9,21 @@ const router = express.Router();
   verifyToken,
 } = require("./services/auth"); */
 
-const itemControllers = require("./controllers/itemControllers");
+const userControllers = require("./controllers/userControllers");
+const vehicleControllers = require("./controllers/vehicleControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+// Gestion des Users
+router.get("/users", userControllers.browse);
+router.get("/users/:id", userControllers.read);
+router.put("/users/:id", userControllers.edit);
+router.post("/users", userControllers.add);
+router.delete("/users/:id", userControllers.destroy);
+
+// Gestion des Vehicles
+router.get("/vehicles", vehicleControllers.browse);
+router.get("/vehicles/:id", vehicleControllers.read);
+router.put("/vehicles/:id", vehicleControllers.edit);
+router.post("/vehicles", vehicleControllers.add);
+router.delete("/vehicles/:id", vehicleControllers.destroy);
 
 module.exports = router;
