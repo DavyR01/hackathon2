@@ -7,17 +7,33 @@ class VehicleManager extends AbstractManager {
 
   insert(vehicle) {
     return this.connection.query(
-      `INSERT INTO ${this.table} (title, content, user_id)
-    VALUES(?,?,?)`,
-      [vehicle.title, vehicle.content, vehicle.user_id]
+      `INSERT INTO ${this.table} (brand, model, mileage, technicalData, localisation, isAvailable, inRepair)
+    VALUES(?, ?, ?, ?, ?, ?, ?)`,
+      [
+        vehicle.brand,
+        vehicle.model,
+        vehicle.mileage,
+        vehicle.technicalData,
+        vehicle.localisation,
+        vehicle.isAvailable,
+        vehicle.inRepair,
+      ]
     );
   }
 
   update(vehicle) {
     return this.connection.query(
-      `UPDATE ${this.table} SET title = ?, content = ?,
-      user_id = ? WHERE id = ? `,
-      [vehicle.title, vehicle.content, vehicle.user_id, vehicle.id]
+      `UPDATE ${this.table} SET brand = ?, model = ?,
+      mileage = ?, technicalData = ?, localisation = ?, isAvailable = ?, inRepair = ? WHERE id = ? `,
+      [
+        vehicle.brand,
+        vehicle.model,
+        vehicle.mileage,
+        vehicle.technicalData,
+        vehicle.localisation,
+        vehicle.isAvailable,
+        vehicle.inRepair,
+      ]
     );
   }
 }
