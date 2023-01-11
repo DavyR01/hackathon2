@@ -1,12 +1,24 @@
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import Welcome from "./pages/Welcome";
 import "./App.css";
-import Test from "./components/Test";
+import VehiculeList from "./pages/VehiculeList";
+import Reserved from "./pages/Reserved";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
-    <div className="App">
-      <p className="bg-green bg-slate-600 text-yellow-700">Hello !!</p>
-      <Test />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/vehiculelist" element={<VehiculeList />} />
+        <Route path="/reserved" element={<Reserved />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
