@@ -59,7 +59,7 @@ function Home() {
 
               <button
                 type="submit"
-                className="hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
+                className="h-10 hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
               >
                 Connexion
               </button>
