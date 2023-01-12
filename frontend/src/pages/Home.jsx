@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
@@ -67,8 +68,8 @@ function Home() {
           </form>
         </div>
       </div>
+      <Navbar />
     </div>
   );
 }
-
 export default Home;

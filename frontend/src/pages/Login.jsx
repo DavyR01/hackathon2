@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
 import { useCurrentUserContext } from "../contexts/UserContext";
 
 function Login() {
@@ -76,6 +77,7 @@ function Login() {
         </div>
       </div>
       <div>{errorMessage}</div>
+      <Navbar />
     </div>
   );
 }
