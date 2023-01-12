@@ -6,8 +6,13 @@ import Modal from "../components/Modal";
 
 function VehiculeList() {
   const [cars, setCars] = useState([]);
+  const [showModal, setShowModal] = useState(false);
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
 
   useEffect(() => {
     fetch("http://localhost:5000/vehicles")
@@ -20,7 +25,8 @@ function VehiculeList() {
       {cars.map((car) => (
         <div className="containertest bg-white">
           <div className="" key={car.id}>
-            <Modal car={car} />
+            {showModal ? <Modal car={car} /> : null}
+
             <h1 className="containerh1"> {car.brand} </h1>
             <div className=" ">
               <h3 className="containerh3"> {car.model}</h3>
@@ -34,9 +40,10 @@ function VehiculeList() {
           </div>
           <button
             type="button"
-            className="container-btn border border-black text-black rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+            className="container-btn border border-black text-black rounded-md  transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+            onClick={() => handleShowModal()}
           >
-            Primary
+            montrer les informations des voitures
           </button>
         </div>
       ))}

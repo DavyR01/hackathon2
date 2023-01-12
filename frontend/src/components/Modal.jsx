@@ -5,12 +5,13 @@ import React from "react";
 function Modal({ car }) {
   console.warn(car);
   return (
-    <div>
-      <ul>
-        <li>{car.model}</li>
-        <li>{car.type}</li>
-        <li>{car.mileage}</li>
-      </ul>
+    <div className="flex justify-center">
+      <div className="bg-red-300 w-3/5 flex justify-center">
+        <ul>
+          <li>{car.localisation}</li>
+          <li>{car.mileage}</li>
+        </ul>
+      </div>
     </div>
   );
 }
