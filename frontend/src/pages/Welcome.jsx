@@ -22,12 +22,15 @@ function Welcome() {
             alt="picturePageWelcome"
           />
         </div>
-        <button
-          type="button"
-          className="mb-2 bg-slate-500 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
-        >
-          Accédez aux offres
-        </button>
+        <NavLink to="home">
+          <button
+            type="button"
+            className="mb-2 bg-slate-500 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+          >
+            Accédez aux offres
+          </button>
+        </NavLink>
+
         <br />
         <NavLink to="login">
           <button
@@ -40,9 +43,9 @@ function Welcome() {
 
         <p className="pb-2 pt-2">
           Pas encore de compte ? Cliquez{" "}
-          <span className="cursor-pointer text-blue-600">
+          <span type="button" className=" spanIci text-blue-600">
             <NavLink to="register">ici </NavLink>
-          </span>
+          </span>{" "}
           pour vous inscrire
         </p>
       </div>

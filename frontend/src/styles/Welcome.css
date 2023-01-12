@@ -23,3 +23,7 @@ body {
   background-color: black;
   opacity: 0.65;
 }
+
+.spanIci {
+  cursor: pointer;
+}
