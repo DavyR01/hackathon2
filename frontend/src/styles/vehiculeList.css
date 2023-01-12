@@ -16,7 +16,7 @@
 .containerh1 {
   display: flex;
   justify-content: center;
-  width: 249px;
+  width: 316px;
   height: 43px;
   font-family: "Inter";
   font-style: normal;
@@ -30,9 +30,9 @@
   justify-content: center;
   position: relative;
   left: 2vh;
-  top: 5vh;
-  width: 71px;
-  height: 20px;
+  top: 9vh;
+  width: 145px;
+  height: 29px;
   background: #eb6440;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -40,14 +40,15 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: 19vh;
-  top: 6.6vh;
+  left: 25vh;
+  top: 5.6vh;
   width: 94px;
-  height: 20px;
+  height: 29px;
   background: #eb6440;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .container-btn {
   position: relative;
-  bottom: 7vh;
+  bottom: 9vh;
+  background-color: #497174;
 }

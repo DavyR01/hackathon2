@@ -32,7 +32,7 @@ function VehiculeList() {
           </div>
           <button
             type="button"
-            className="container-btn border border-indigo-500 bg-[#497174] text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+            className="container-btn border border-black text-black rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
           >
             Primary
           </button>
