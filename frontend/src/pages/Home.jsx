@@ -49,7 +49,7 @@ function Home() {
             </div>
             <div className="flex flex-col items-center">
               <div className="mb-3">
-                <p>Date de départ</p>
+                <p>Date de départ :</p>
                 <input
                   type="date"
                   placeholder=""
@@ -58,7 +58,7 @@ function Home() {
                 />
               </div>
               <div className="mb-3">
-                <p>Date d'arrivée</p>
+                <p>Date d'arrivée :</p>
                 <input
                   type="date"
                   placeholder=""
