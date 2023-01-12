@@ -107,9 +107,9 @@ function SignIn() {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className="bg-red-900 text-white m-1 py-1 px-4 mt-24 rounded-lg shadow-lg h-14 w-44 md:h-14 md:w-44 md:text-lg hover:shadow hover:bg-[#FFC927] hover:text-black"
+            className="h-14 w-2/5 mr-2 bg-green-600 opacity-60 hover:opacity-100 hover:text-white  text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
           >
-            Connexion
+            Inscription
           </button>
         </div>
       </div>

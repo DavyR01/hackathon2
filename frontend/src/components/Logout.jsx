@@ -14,9 +14,9 @@ function LogOut() {
     <button
       type="button"
       onClick={onClick}
-      className="md:ml-4 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-red-700 rounded-md hover:shadow hover:bg-[#FFFFFF] hover:text-[#15133C] hover:border hover:border-[#15133C]"
+      className="bg-blue-800 h-14 w-2/5 buttonExplorer text-white text-center font-medium rounded-lg  px-1 py-1 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100 border-2"
     >
-      Log Out
+      Déconnexion
     </button>
   );
 }
