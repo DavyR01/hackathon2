@@ -33,7 +33,7 @@ function Login() {
         .then((result) => {
           setUser(result.user);
           setToken(result.token);
-          navigate("/");
+          navigate("/home");
         })
         .catch(console.error);
     } else {
