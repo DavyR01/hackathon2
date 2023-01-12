@@ -28,7 +28,7 @@ function Login() {
 
     if (email && password) {
       // on appelle le back
-      fetch("http://localhost:5000/login", requestOptions)
+      fetch("http://localhost:5000/api/login", requestOptions)
         .then((response) => response.json())
         .then((result) => {
           setUser(result.user);
