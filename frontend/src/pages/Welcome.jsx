@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Welcome.css";
+import { NavLink } from "react-router-dom";
 import Car1 from "../assets/car1.jpg";
 
 function Welcome() {
@@ -8,7 +9,7 @@ function Welcome() {
       <div className="réservationStart text-lg">
         <div className="containerImageCar text-center">
           <div className="frameWelcome flex justify-center items-center">
-            <h1 className="text-white pl-8 pr-8">
+            <h1 className="text-white text-2xl pl-8 pr-8">
               BIENVENUE SUR CARGOWHEELS
               <p className="text-base mt-4">
                 le site de réservation de voiture number one
@@ -21,19 +22,32 @@ function Welcome() {
             alt="picturePageWelcome"
           />
         </div>
-        <button
-          type="button"
-          className="hover:bg-slate-500 hover:text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
-        >
-          Accédez aux offres
-        </button>
-        <p className="pb-2 pt-2"> Vous avez déja un compte ?</p>
-        <button
-          type="button"
-          className="bg-red-900 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
-        >
-          SE CONNECTER
-        </button>
+        <NavLink to="home">
+          <button
+            type="button"
+            className="mb-2 bg-slate-500 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+          >
+            Accédez aux offres
+          </button>
+        </NavLink>
+
+        <br />
+        <NavLink to="login">
+          <button
+            type="button"
+            className="bg-red-900 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+          >
+            SE CONNECTER
+          </button>
+        </NavLink>
+
+        <p className="pb-2 pt-2">
+          Pas encore de compte ? Cliquez{" "}
+          <span type="button" className=" spanIci text-blue-600">
+            <NavLink to="register">ici </NavLink>
+          </span>{" "}
+          pour vous inscrire
+        </p>
       </div>
     </div>
   );
