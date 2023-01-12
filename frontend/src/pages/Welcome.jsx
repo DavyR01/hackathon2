@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Welcome.css";
 import { NavLink } from "react-router-dom";
-import Car1 from "../assets/car1.jpg";
 
 function Welcome() {
   return (
@@ -12,13 +11,13 @@ function Welcome() {
             <h1 className="text-white text-2xl pl-8 pr-8">
               BIENVENUE SUR CARGOWHEELS
               <p className="text-base mt-4">
-                le site de réservation de voiture number one
+                le site de réservation de voiture numéro uno
               </p>
             </h1>
           </div>
           <img
             className="carImageWelcome inline-block pb-2 item-center margin-auto"
-            src={Car1}
+            src="./src/assets/car1.jpg"
             alt="picturePageWelcome"
           />
         </div>
