@@ -31,15 +31,23 @@ function Reserved() {
           </p>
           <p>
             Kilométrage :{" "}
-            <span className="text-blue-800 text-2xl">47560 km</span>
+            <span className="text-blue-800 text-2xl">100000 km</span>
           </p>
           <p>
-            Carburant : <span className="text-blue-800 text-2xl">Diesel</span>
+            Carburant : <span className="text-blue-800 text-2xl">Essence</span>
           </p>
           <p>
             Disponibilité : <span className="text-green-600 text-2xl">Oui</span>
           </p>
         </div>
+      </div>
+      <div className="flex justify-end">
+        <button
+          type="button"
+          className="mr-10 mt-4 bg-black text-white buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-4 py-2 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100 border-2"
+        >
+          RESERVER
+        </button>
       </div>
       <Navbar />
     </div>
