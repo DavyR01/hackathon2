@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS vehicle;
 
 CREATE TABLE vehicle (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  car_type VARCHAR(80) NOT NULL,
   brand VARCHAR(80) NOT NULL,
   model VARCHAR(80) NOT NULL,
   picture VARCHAR(255) NOT NULL,
@@ -13,7 +14,7 @@ CREATE TABLE vehicle (
 -- ENGINE = InnoDB;
 );
 
-INSERT INTO vehicle (brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Golf', '308','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Audi', 'A7','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('BMW', 'Serie 3','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0');
+INSERT INTO vehicle (car_type, brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Berline','Peugeot', '206','monimage.png','48500 km', 'Essence', 'Lyon', '1', '0'),('Berline','Golf', '308','monimage.png','25320 km', 'Diesel', 'Nantes', '0', '1'),('Berline','Audi', 'A7','monimage.png','150000 km', 'Essence', 'Lyon', '1', '0'),('Berline','Audi', 'A3','monimage.png','8000 km', 'Diesel', 'Paris', '1', '0'),('Berline','BMW', 'Serie 3','monimage.png','70000 km', 'Diesel', 'Lyon', '0', '1'),('Utilitaire','Ford', 'Transit Connect','monimage.png','76050 km', 'Diesel', 'Lyon', '1', '0'),('Utilitaire','Volkswagen', 'Caddy Cargo','monimage.png','89000 km', 'Essence', 'Bordeaux', '1', '0'),('Electrique','Seat', 'MII Electric','monimage.png','100000 km', 'Electric', 'Lyon', '1', '0'),('Electrique','Cupra', 'Born','monimage.png','100000 km', 'Electric', 'Toulouse', '1', '0');
 
 DROP TABLE IF EXISTS user;
 
@@ -34,5 +35,5 @@ CREATE TABLE user (
 );
 -- ENGINE = InnoDB;
 
-INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1'),('Captain', 'America', 'captain.america@gmail.com', 'Oslo', '0652658000', '12345', '1', 'monavatar2.png', '2022-10-16 12:12:23', '1'),('Docteur', 'Strange', 'docteur.strange@example.com', 'Oslo', '0659815495', '12345', '1', 'monavatar3.png', '2022-10-14 12:12:23', '1'),('Tony', 'Stark', 'tony.stark@example.com', 'Oslo', '0620326521', '12345', '1', 'monavatar4.png', '2022-10-08 12:12:23', '1');
+INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1')
 
