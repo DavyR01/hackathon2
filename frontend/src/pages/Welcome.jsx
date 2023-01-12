@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Welcome.css";
 import { NavLink } from "react-router-dom";
-import Car1 from "../assets/car1.jpg";
 
 function Welcome() {
   return (
@@ -12,20 +11,20 @@ function Welcome() {
             <h1 className="text-white text-2xl pl-8 pr-8">
               BIENVENUE SUR CARGOWHEELS
               <p className="text-base mt-4">
-                le site de réservation de voiture number one
+                le site de réservation de voiture numéro uno
               </p>
             </h1>
           </div>
           <img
             className="carImageWelcome inline-block pb-2 item-center margin-auto"
-            src={Car1}
+            src="./src/assets/car1.jpg"
             alt="picturePageWelcome"
           />
         </div>
         <NavLink to="home">
           <button
             type="button"
-            className="mb-2 bg-slate-500 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+            className="opacity-70 mb-2 bg-black hover:opacity-100 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
           >
             Accédez aux offres
           </button>
@@ -35,7 +34,7 @@ function Welcome() {
         <NavLink to="login">
           <button
             type="button"
-            className="bg-red-900 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+            className="opacity-70 hover:opacity-100 bg-red-700 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
           >
             SE CONNECTER
           </button>

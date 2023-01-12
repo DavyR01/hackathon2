@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS vehicle;
 
 CREATE TABLE vehicle (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  car_type VARCHAR(80) NOT NULL,
   brand VARCHAR(80) NOT NULL,
   model VARCHAR(80) NOT NULL,
   picture VARCHAR(255) NOT NULL,
@@ -13,7 +14,7 @@ CREATE TABLE vehicle (
 -- ENGINE = InnoDB;
 );
 
-INSERT INTO vehicle (brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Peugeot', '206','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Golf', '308','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('Audi', 'A7','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0'),('BMW', 'Serie 3','monimage.png','150000 km', 'Diesel', 'Lyon', '1', '0');
+INSERT INTO vehicle (car_type, brand, model, picture, mileage, technicalData, localisation, isAvailable, inRepair) VALUES ('Berline','Peugeot', '206','../frontend/src/peugeot-206.jpg','48500 km', 'Essence', 'Lyon', '1', '0'),('Berline','Golf', '308','../frontend/src/Golf-GTI','25320 km', 'Diesel', 'Nantes', '0', '1'),('Berline','Audi', 'A7','../frontend/src/audi-a7.png','150000 km', 'Essence', 'Lyon', '1', '0'),('Berline','Audi', 'A3','../frontend/src/audi-a3.jpg','8000 km', 'Diesel', 'Paris', '1', '0'),('Berline','BMW', 'Serie 3','../frontend/src/bmw-3.png','70000 km', 'Diesel', 'Lyon', '0', '1'),('Utilitaire','Ford', 'Transit Connect','../frontend/src/ford-transit','76050 km', 'Diesel', 'Lyon', '1', '0'),('Utilitaire','Volkswagen', 'Caddy Cargo','../frontend/src/caddy-cargo.png','89000 km', 'Essence', 'Bordeaux', '1', '0'),('Electrique','Seat', 'MII Electric','../frontend/src/seat-mii.jpg','100000 km', 'Electric', 'Lyon', '1', '0'),('Electrique','Cupra', 'Born','../frontend/src/cupra-born.jpg','100000 km', 'Electric', 'Toulouse', '1', '0');
 
 DROP TABLE IF EXISTS user;
 
