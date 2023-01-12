@@ -5,38 +5,46 @@ function Home() {
   return (
     <div>
       <div className="h-screen">
-        <h1 className="text-center mt-5">Bienvenue</h1>
+        <h1 className="text-center mt-5 text-5xl">
+          Bienvenue chez CarGoWheels !
+        </h1>
         <div className="mt-10">
           <form className="m-auto mt-5">
-            <p className="text-center">Type de véhicule</p>
-            <div className="mb-3 flex mt-5">
-              <button className="w-1/3" type="button">
-                {" "}
-                Berline
-                <img
-                  className="h-28"
-                  src="./src/assets/png-clipart-sports-car-computer-icons-vehicle-minivan-car-compact-car-sedan-removebg-preview.png"
-                  alt="berline"
-                />
-              </button>
-              <button className="w-1/3" type="button">
-                {" "}
-                Utilitaire
-                <img
-                  className="h-28"
-                  src="./src/assets/kisspng-van-car-computer-icons-professional-services-5af3da1ab964b2.8835695915259305227594-removebg-preview.png"
-                  alt="utilitaire"
-                />
-              </button>
-              <button className="w-1/3" type="button">
-                {" "}
-                Electrique
-                <img
-                  className="h-28"
-                  src="./src/assets/voiture elec.png"
-                  alt="berline"
-                />
-              </button>
+            <p className="text-center text-3xl">Type de véhicule</p>
+            <div className="mb-8 flex mt-5 bg-gray-300">
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Berline
+                  <img
+                    className="h-24 w-12"
+                    src="./src/assets/berlinerouge.png"
+                    alt="berline"
+                  />
+                </button>
+              </div>
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Utilitaire
+                  <img
+                    className="h-16 w-16"
+                    src="./src/assets/kisspng-van-car-computer-icons-professional-services-5af3da1ab964b2.8835695915259305227594-removebg-preview.png"
+                    alt="utilitaire"
+                  />
+                </button>
+              </div>
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Electrique
+                  <img
+                    className="h-16 w-16"
+                    src="./src/assets/electriccar1.png"
+                    alt="berline"
+                  />
+                </button>
+              </div>
             </div>
             <div className="flex flex-col items-center">
               <div className="mb-3">
@@ -44,7 +52,7 @@ function Home() {
                 <input
                   type="password"
                   placeholder="mot de passe"
-                  className="form-control border-solid border-black border-2 rounded-lg h-10"
+                  className="form-control border-solid border-black border-2 px-4 rounded-lg h-10"
                   id="password"
                 />
               </div>
@@ -53,14 +61,14 @@ function Home() {
                 <input
                   type="email"
                   placeholder="email"
-                  className="form-control border-solid border-black border-2 rounded-lg h-10"
+                  className="form-control border-solid border-black border-2 px-4 rounded-lg h-10"
                   id="email"
                 />
               </div>
 
               <button
                 type="submit"
-                className="h-10 hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
+                className=" h-14 w-44 mt-12 hover:bg-green-600 hover:text-white bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
               >
                 Connexion
               </button>
