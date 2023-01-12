@@ -7,7 +7,6 @@ import Reserved from "./pages/Reserved";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { CurrentUserContextProvider } from "./contexts/UserContext";
-import SignIn from "./pages/SignIn";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
           <Route path="/vehiculelist" element={<VehiculeList />} />
           <Route path="/reserved" element={<Reserved />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signin" element={<SignIn />} />
           <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
