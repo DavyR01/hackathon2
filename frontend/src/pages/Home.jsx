@@ -13,42 +13,51 @@ function Home() {
       {/* **************************** */}
 
       <div className="h-screen">
-        <h1 className="text-center mt-5 bg-black text-white p-2 text-3xl">
-          Veuillez sélectionner vos critères <br /> de recherches
-        </h1>
-        <div className="mt-10">
+        <div className="bg-gray-700 rounded-6xl ">
+          <h1 className="text-center mt-5 text-3xl text-white py-4">
+            Veuillez sélectionner vos critères <br /> de recherches
+          </h1>
+        </div>
+        <div className="mt-10 ">
           <form className="m-auto mt-5">
-            <p className="text-center text-3xl">Type de véhicule</p>
-            <div className="mb-8 flex mt-5 bg-gray-300">
-              <div className="flex-col mx-auto">
-                <button className="w-1/3 text-xl" type="button">
+            <div className="bg-red-900 text-white rounded-6xl mx-2">
+              <p className="text-center text-2xl">Type de véhicule</p>
+            </div>
+
+            <div className="mb-8 justify-around flex mt-5 bg-gray-300 h-24 ml-4 mr-4 px-4 rounded-2xl ">
+              <div className="flex-col ml-2 w-1/3">
+                <button
+                  className="w-16 h-16 text-xl text-red-900 border-black "
+                  type="button"
+                >
                   {" "}
                   Berline
                   <img
-                    className="h-24 w-12"
-                    src="./src/assets/berlinerouge.png"
+                    className="h-18 w-18 mt-3"
+                    src="./src/assets/berline.svg"
                     alt="berline"
                   />
                 </button>
               </div>
-              <div className="flex-col mx-auto">
-                <button className="w-1/3 text-xl" type="button">
+
+              <div className="flex-col w-1/3">
+                <button className="w-12 text-xl text-red-900" type="button">
                   {" "}
                   Utilitaire
                   <img
-                    className="h-16 w-16"
-                    src="./src/assets/kisspng-van-car-computer-icons-professional-services-5af3da1ab964b2.8835695915259305227594-removebg-preview.png"
+                    className="h-12 w-10 mt-5"
+                    src="./src/assets/utilitaire.svg"
                     alt="utilitaire"
                   />
                 </button>
               </div>
-              <div className="flex-col mx-auto">
-                <button className="w-1/3 text-xl" type="button">
+              <div className="flex-col w-1/3">
+                <button className="w-10 text-xl text-red-900" type="button">
                   {" "}
                   Electrique
                   <img
-                    className="h-16 w-16"
-                    src="./src/assets/electriccar1.png"
+                    className="h-16 w-16 mt-2"
+                    src="./src/assets/carelectric.svg"
                     alt="berline"
                   />
                 </button>
@@ -106,7 +115,7 @@ function Home() {
 
               <button
                 type="submit"
-                className=" h-14 w-44 mt-12 hover:bg-green-600 hover:text-white bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
+                className=" h-14 w-44 mt-10 hover:bg-green-600 hover:text-white bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
               >
                 Rechercher
               </button>
@@ -310,6 +319,7 @@ function Home() {
           {/* /***************************** */}
         </div>
       </div>
+
       <Navbar />
     </div>
   );
