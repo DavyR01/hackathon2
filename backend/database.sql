@@ -22,7 +22,7 @@ CREATE TABLE user (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   firstname VARCHAR(80) NOT NULL,
   lastname VARCHAR(80) NOT NULL,
-  email VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
   city VARCHAR(80) NULL,
   phone VARCHAR(20) NULL,
   hashedPassword VARCHAR(100) NOT NULL,
@@ -33,7 +33,6 @@ CREATE TABLE user (
   -- CONSTRAINT `fk_user_vehicule`
   FOREIGN KEY (vehicle_id) REFERENCES vehicle (id)
 );
--- ENGINE = InnoDB;
 
-INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '12345', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1')
+INSERT INTO user (firstname, lastname, email, city, phone, hashedPassword, isAdmin, avatar, date_creation, vehicle_id) VALUES ('Jack', 'Sparrow', 'jack.sparrow@gmail.com', 'Oslo', '0600000000', '$argon2id$v=19$m=65536,t=5,p=1$n0d+QZC50J4zxh96zq0FDw$Qtfc4rjgLIlcJJ9iipQ2lNwPDIPTOx/YX/5JNdxSVZg', '1', 'monavatar1.png', '2022-10-18 12:12:23', '1');
 

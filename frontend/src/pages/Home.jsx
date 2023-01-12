@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 import Car1 from "../assets/car1.jpg";
 import Berline1 from "../assets/berline1.png";
 import Berline2 from "../assets/berline2.png";
-import "tw-elements";
+// import "tw-elements";
 import "../styles/Home.css";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
@@ -12,11 +13,48 @@ function Home() {
       {/* **************************** */}
 
       <div className="h-screen">
-        <h1 className="text-center mt-5 bg-black text-white p-2">
-          Veuillez sélectionner vos critères <br /> de recherches
+        <h1 className="text-center mt-5 bg-black text-white p-2 text-5xl">
+          Veuillez sélectionner vos critères <br /> de recherches chez
+          CarGoWheels !
         </h1>
         <div className="mt-10">
           <form className="m-auto mt-5">
+            <p className="text-center text-3xl">Type de véhicule</p>
+            <div className="mb-8 flex mt-5 bg-gray-300">
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Berline
+                  <img
+                    className="h-24 w-12"
+                    src="./src/assets/berlinerouge.png"
+                    alt="berline"
+                  />
+                </button>
+              </div>
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Utilitaire
+                  <img
+                    className="h-16 w-16"
+                    src="./src/assets/kisspng-van-car-computer-icons-professional-services-5af3da1ab964b2.8835695915259305227594-removebg-preview.png"
+                    alt="utilitaire"
+                  />
+                </button>
+              </div>
+              <div className="flex-col mx-auto">
+                <button className="w-1/3 text-xl" type="button">
+                  {" "}
+                  Electrique
+                  <img
+                    className="h-16 w-16"
+                    src="./src/assets/electriccar1.png"
+                    alt="berline"
+                  />
+                </button>
+              </div>
+            </div>
             <p className="text-center">Type de véhicule</p>
             <div className="mb-3 flex mt-5">
               <button className="w-1/3" type="button">
@@ -69,7 +107,7 @@ function Home() {
 
               <button
                 type="submit"
-                className="p-2 h-10 hover:bg-green-600 hover:text-white bg-green-500 text-white border-solid boder-black border-2 rounded-lg"
+                className=" h-14 w-44 mt-12 hover:bg-green-600 hover:text-white bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
               >
                 Rechercher
               </button>
@@ -273,8 +311,8 @@ function Home() {
           {/* /***************************** */}
         </div>
       </div>
+      <Navbar />
     </div>
   );
 }
-
 export default Home;
