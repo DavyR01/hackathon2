@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/vehiculeList.css";
 import audi from "../assets/audi.png";
+import Modal from "../components/Modal";
 
 function VehiculeList() {
   const [cars, setCars] = useState([]);
@@ -19,6 +20,7 @@ function VehiculeList() {
       {cars.map((car) => (
         <div className="containertest bg-white">
           <div className="" key={car.id}>
+            <Modal car={car} />
             <h1 className="containerh1"> {car.brand} </h1>
             <div className=" ">
               <h3 className="containerh3"> {car.model}</h3>
