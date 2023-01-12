@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useCurrentUserContext } from "../contexts/UserContext";
+import LogOut from "../components/Logout";
 
 function Login() {
   const { setUser, setToken } = useCurrentUserContext();
@@ -74,6 +75,7 @@ function Login() {
               >
                 Connexion
               </button>
+              <LogOut />
             </div>
           </form>
         </div>
