@@ -39,7 +39,6 @@ const verifyPassword = (req, res) => {
       } else res.sendStatus(401);
     })
     .catch((err) => {
-      // do something with err
       console.error(err);
       res.sendStatus(400);
     });
