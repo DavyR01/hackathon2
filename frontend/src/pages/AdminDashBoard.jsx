@@ -1,8 +1,39 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 function AdminDashBoard() {
+  const [model, setModel] = useState("");
+  const [brand, setBrand] = useState("");
+  const [technicalData, setTechnicalData] = useState("");
+  const [mileage, setMileage] = useState("");
+  const [localisation, setLocalisation] = useState("");
+
+  const handleForm = (e) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const body = JSON.stringify({
+      model,
+      brand,
+      technicalData,
+      mileage,
+      localisation,
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body,
+    };
+    e.preventDefault();
+    // on créé et on redirige
+    fetch("http://localhost:5000/vehicles", requestOptions)
+      .then((response) => {
+        response.text();
+      })
+      .catch(console.error);
+  };
   return (
     <div>
       {" "}
@@ -41,81 +72,100 @@ function AdminDashBoard() {
           </div>
         </div>
       </div>
-      <form>
+      <form onSubmit={handleForm}>
         <div className=" flex flex-col justify-center bg-gray-100 mt-8">
           <h1 className="text-3xl text-center">Gérez votre compte</h1>
           <div className="mt-8 mx-12  bg-gray-400 py-4 px-4 h-1/2 md:w-1/3 md:mx-auto">
             <div className="w-full flex flex-col justify-center items-center">
               <div className="mb-4">
-                <label htmlFor="Nom" className="block font-medium text-sm mb-2">
-                  Prénom
+                <label
+                  htmlFor="type de voiture"
+                  className="block font-medium text-sm mb-2"
+                >
+                  Type de voiture
                 </label>
                 <input
-                  id="lestname"
+                  onChange={(e) => setModel(e.target.value)}
+                  id="Type de voiture"
                   type="text"
                   required
                   pattern=".+"
-                  placeholder="Nom"
+                  placeholder="Type de voiture"
                   className=" border-gray-400 bg-gray-100 rounded-bl-lg rounded-br-lg p-4 w-full h-10"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="Prénom"
+                  htmlFor="Marque"
                   className="block font-medium text-sm mb-2"
                 >
-                  Nom{" "}
+                  Marque{" "}
                 </label>
                 <input
-                  id="prénom"
+                  onChange={(e) => setBrand(e.target.value)}
+                  id="Marque"
                   type="text"
                   required
                   pattern=".+"
-                  placeholder="Prénom"
+                  placeholder="Marque"
                   className=" border-gray-400 bg-gray-100 rounded-bl-lg rounded-br-lg  p-4 w-full h-10 mb-6"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="Email"
+                  htmlFor="Kilométrage"
                   className="block font-medium text-sm mb-2"
                 >
-                  Email{" "}
+                  Kilométrage{" "}
                 </label>
                 <input
-                  id="e-mail"
-                  type="email"
+                  onChange={(e) => setMileage(e.target.value)}
+                  id="Kilométrage"
+                  type="text"
                   required
                   pattern=".+"
-                  placeholder="E-mail"
+                  placeholder="Kilométrage"
                   className=" border-gray-400 bg-gray-100 rounded-bl-lg rounded-br-lg  p-4 w-full h-10 mb-6"
                 />
               </div>
               <div>
                 <label
-                  htmlFor="password"
+                  htmlFor="Détails techniques"
                   className="block font-medium text-sm mb-2"
                 >
-                  Mot de Passe{" "}
+                  Détails techniques{" "}
                 </label>
                 <input
-                  id="password"
-                  type="password"
+                  onChange={(e) => setTechnicalData(e.target.value)}
+                  id="Détails techniques"
+                  type="text"
                   required
                   pattern=".+"
-                  placeholder="Mot de passe"
+                  placeholder="Détails techniques"
+                  className=" border-gray-400 bg-gray-100 rounded-bl-lg rounded-br-lg  p-4 w-full h-10 mb-6"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="Localisation"
+                  className="block font-medium text-sm mb-2"
+                >
+                  Localisation{" "}
+                </label>
+                <input
+                  onChange={(e) => setLocalisation(e.target.value)}
+                  id="Localisation"
+                  type="text"
+                  required
+                  pattern=".+"
+                  placeholder="Localisaton"
                   className=" border-gray-400 bg-gray-100 rounded-bl-lg rounded-br-lg  p-4 w-full h-10 mb-6"
                 />
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <button
-              type="submit"
-              className="bg-red-900 text-white m-1 py-1 px-4 mt-8 rounded-lg shadow-lg h-14 w-44 md:h-14 md:w-44 md:text-lg hover:shadow hover:bg-[#FFC927] hover:text-black"
-            >
-              Connexion
-            </button>
+          <div className="mb-20 flex justify-between pl-4 pr-4">
+            <button type="submit">ajouter</button>
           </div>
         </div>
       </form>
