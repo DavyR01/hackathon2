@@ -115,7 +115,7 @@ function Home() {
 
               <button
                 type="submit"
-                className=" h-14 w-44 mt-10 hover:bg-green-600 hover:text-white bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
+                className=" h-14 w-44 mt-10 bg-green-600 opacity-60 hover:opacity-100 hover:text-white bg-red-900 text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
               >
                 Rechercher
               </button>
@@ -277,7 +277,7 @@ function Home() {
             <NavLink to="/vehiculelist">
               <button
                 type="button"
-                className="bg-blue-800 buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-1 py-1 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100"
+                className="bg-blue-800 buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-1 py-1 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100 border-2"
               >
                 EXPLORER LES <br /> DIFFERENTS MODELES
               </button>
