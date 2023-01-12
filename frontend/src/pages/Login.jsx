@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCurrentUserContext } from "../contexts/UserContext";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { useCurrentUserContext } from "../contexts/UserContext";
 
 function Login() {
   const { setUser, setToken } = useCurrentUserContext();
