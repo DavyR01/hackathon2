@@ -145,13 +145,14 @@ function Home() {
                   id="email"
                 />
               </div>
-
-              <button
-                type="submit"
-                className=" h-14 w-44 mt-10 bg-green-600 opacity-60 hover:opacity-100 hover:text-white  text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
-              >
-                Rechercher
-              </button>
+              <NavLink to="/vehiculeList">
+                <button
+                  type="submit"
+                  className=" h-14 w-44 mt-10 bg-green-600 opacity-60 hover:opacity-100 hover:text-white  text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
+                >
+                  Rechercher
+                </button>
+              </NavLink>
               <br />
             </div>
           </form>

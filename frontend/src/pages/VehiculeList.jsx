@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/vehiculeList.css";
 import audi from "../assets/audi.png";
@@ -34,9 +35,11 @@ function VehiculeList() {
             <div className="container-techi">
               <h3 className="container-h3">{car.technicalData}</h3>
             </div>
-            <div>
-              <img className="container-audi" src={audi} alt="audi" />
-            </div>
+            <NavLink to="/reserved">
+              <div>
+                <img className="container-audi" src={audi} alt="audi" />
+              </div>
+            </NavLink>
           </div>
           <button
             type="button"

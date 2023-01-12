@@ -31,10 +31,10 @@ function Reserved() {
           </p>
           <p>
             Kilométrage :{" "}
-            <span className="text-blue-800 text-2xl">47560 km</span>
+            <span className="text-blue-800 text-2xl">100000 km</span>
           </p>
           <p>
-            Carburant : <span className="text-blue-800 text-2xl">Diesel</span>
+            Carburant : <span className="text-blue-800 text-2xl">Essence</span>
           </p>
           <p>
             Disponibilité : <span className="text-green-600 text-2xl">Oui</span>
