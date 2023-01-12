@@ -7,6 +7,7 @@ import Reserved from "./pages/Reserved";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { CurrentUserContextProvider } from "./contexts/UserContext";
+import "tw-elements";
 
 function App() {
   return (
