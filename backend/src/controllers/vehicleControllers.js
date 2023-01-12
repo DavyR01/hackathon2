@@ -29,7 +29,7 @@ const read = (req, res) => {
 
 const add = (req, res) => {
   const vehicle = req.body;
-  vehicle.user_id = req.payloads.sub;
+  // vehicle.user_id = req.payloads.sub;
 
   models.vehicle
     .insert(vehicle)
@@ -37,6 +37,7 @@ const add = (req, res) => {
       res.location(`/api/vehicles/${result.insertId}`).sendStatus(201);
     })
     .catch((error) => {
+      console.warn("pas bon");
       console.error(error);
       res.sendStatus(500);
     });

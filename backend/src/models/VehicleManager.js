@@ -7,16 +7,14 @@ class VehicleManager extends AbstractManager {
 
   insert(vehicle) {
     return this.connection.query(
-      `INSERT INTO ${this.table} (brand, model, mileage, technicalData, localisation, isAvailable, inRepair)
-    VALUES(?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO ${this.table} (brand, model, mileage, technicalData, localisation)
+    VALUES(?, ?, ?, ?, ?)`,
       [
         vehicle.brand,
         vehicle.model,
         vehicle.mileage,
         vehicle.technicalData,
         vehicle.localisation,
-        vehicle.isAvailable,
-        vehicle.inRepair,
       ]
     );
   }

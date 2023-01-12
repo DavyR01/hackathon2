@@ -2,13 +2,13 @@ DROP TABLE IF EXISTS vehicle;
 
 CREATE TABLE vehicle (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  car_type VARCHAR(80) NOT NULL,
-  brand VARCHAR(80) NOT NULL,
-  model VARCHAR(80) NOT NULL,
-  picture VARCHAR(255) NOT NULL,
-  mileage VARCHAR(80) NOT NULL,
-  technicalData VARCHAR(255) NOT NULL,
-  localisation VARCHAR(80) NOT NULL,
+  car_type VARCHAR(80) NULL,
+  brand VARCHAR(80) NULL,
+  model VARCHAR(80) NULL,
+  picture VARCHAR(255) NULL,
+  mileage VARCHAR(80) NULL,
+  technicalData VARCHAR(255) NULL,
+  localisation VARCHAR(80) NULL,
   isAvailable TINYINT NULL,
   inRepair TINYINT NULL
 -- ENGINE = InnoDB;

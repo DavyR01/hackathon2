@@ -31,8 +31,8 @@ router.delete("/users/:id", verifyToken, userControllers.destroy);
 // Gestion des Vehicles
 router.get("/vehicles", vehicleControllers.browse);
 router.get("/vehicles/:id", vehicleControllers.read);
-router.put("/vehicles/:id", vehicleControllers.edit);
+router.put("/vehicles/:id", verifyToken, vehicleControllers.edit);
 router.post("/vehicles", vehicleControllers.add);
-router.delete("/vehicles/:id", vehicleControllers.destroy);
+router.delete("/vehicles/:id", verifyToken, vehicleControllers.destroy);
 
 module.exports = router;
