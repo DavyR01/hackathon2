@@ -1,0 +1,29 @@
+body {
+  background-color: #d6e4e5;
+}
+
+.réservationStart {
+  text-align: center;
+}
+
+.carImageWelcome {
+  height: 65vh;
+}
+
+.containerImageCar {
+  position: relative;
+}
+
+.frameWelcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  opacity: 0.65;
+}
+
+.spanIci {
+  cursor: pointer;
+}
