@@ -7,6 +7,7 @@ import Reserved from "./pages/Reserved";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { CurrentUserContextProvider } from "./contexts/UserContext";
+import AdminDashBoard from "./pages/AdminDashBoard";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reserved" element={<Reserved />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin" element={<AdminDashBoard />} />
         </Routes>
       </BrowserRouter>
     </CurrentUserContextProvider>
