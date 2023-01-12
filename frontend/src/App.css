@@ -8,7 +8,9 @@
   padding: 0;
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: #EFF5F5;
+}
 .App {
   text-align: center;
 }
