@@ -45,7 +45,7 @@ function Home() {
               <p className="text-center text-2xl">Type de véhicule</p>
             </div>
 
-            <div className="mb-8 justify-around flex mt-5 bg-gray-300 h-24 ml-4 mr-4 px-4 rounded-2xl ">
+            <div className=" mb-8 justify-around flex mt-5 bg-gray-300 h-24 ml-4 mr-4 px-4 rounded-2xl ">
               <div className="flex-col ml-2 w-1/3" style={styles1}>
                 <button
                   onClick={handleClickSelected1}
@@ -69,11 +69,13 @@ function Home() {
                 >
                   {" "}
                   Utilitaire
-                  <img
-                    className="h-12 w-10 mt-5"
-                    src="./src/assets/utilitaire.svg"
-                    alt="utilitaire"
-                  />
+                  <div className="relative">
+                    <img
+                      className="absolute -right-2.5 h-12 w-10 mt-5"
+                      src="./src/assets/utilitaire.svg"
+                      alt="utilitaire"
+                    />
+                  </div>
                 </button>
               </div>
               <div className="flex-col w-1/3" style={styles3}>
@@ -84,11 +86,13 @@ function Home() {
                 >
                   {" "}
                   Electrique
-                  <img
-                    className="h-16 w-16 mt-2"
-                    src="./src/assets/carelectric.svg"
-                    alt="berline"
-                  />
+                  <div className="relative">
+                    <img
+                      className="absolute -right-5 h-16 w-16 mt-2"
+                      src="./src/assets/carelectric.svg"
+                      alt="berline"
+                    />
+                  </div>
                 </button>
               </div>
             </div>
