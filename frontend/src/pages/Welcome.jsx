@@ -24,7 +24,7 @@ function Welcome() {
         <NavLink to="home">
           <button
             type="button"
-            className="mb-2 bg-slate-500 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+            className="opacity-70 mb-2 bg-black hover:opacity-100 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
           >
             Accédez aux offres
           </button>
@@ -34,7 +34,7 @@ function Welcome() {
         <NavLink to="login">
           <button
             type="button"
-            className="bg-red-900 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
+            className="opacity-70 hover:opacity-100 bg-red-700 text-white font-medium rounded-lg text-xl px-4 py-4 text-center border hover:scale-105 duration-300"
           >
             SE CONNECTER
           </button>
