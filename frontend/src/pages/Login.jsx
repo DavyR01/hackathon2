@@ -68,10 +68,10 @@ function Login() {
                 id="password"
               />
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <button
                 type="submit"
-                className="hover:bg-green-600 hover:text-white px-4 py-1 mt-12 h-14 w-44 bg-red-900 text-white border-solid boder-black border-2 rounded-lg"
+                className="hover:bg-green-600 mb-4 hover:text-white px-4 py-1 mt-12 h-14 w-44 bg-red-700 text-white border-solid boder-black border-2 rounded-lg"
               >
                 Connexion
               </button>
