@@ -13,9 +13,8 @@ function Home() {
       {/* **************************** */}
 
       <div className="h-screen">
-        <h1 className="text-center mt-5 bg-black text-white p-2 text-5xl">
-          Veuillez sélectionner vos critères <br /> de recherches chez
-          CarGoWheels !
+        <h1 className="text-center mt-5 bg-black text-white p-2 text-3xl">
+          Veuillez sélectionner vos critères <br /> de recherches
         </h1>
         <div className="mt-10">
           <form className="m-auto mt-5">
@@ -55,7 +54,7 @@ function Home() {
                 </button>
               </div>
             </div>
-            <p className="text-center">Type de véhicule</p>
+            {/* <p className="text-center">Type de véhicule</p>
             <div className="mb-3 flex mt-5">
               <button className="w-1/3" type="button">
                 {" "}
@@ -84,7 +83,7 @@ function Home() {
                   alt="berline"
                 />
               </button>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center">
               <div className="mb-3">
                 <p>Date de départ :</p>
@@ -117,7 +116,7 @@ function Home() {
           {/** ************************* CAROUSEL ********************** */}
           <div
             id="indicators-carousel"
-            className="relative"
+            className="relative pt-6"
             data-carousel="static"
           >
             {/* <!-- Carousel wrapper --> */}
@@ -269,7 +268,7 @@ function Home() {
             <NavLink to="/vehiculelist">
               <button
                 type="button"
-                className="bg-blue-800 buttonExplorer text-white text-center mb-2 font-medium rounded-lg text-lg px-1 py-1 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100"
+                className="bg-blue-800 buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-1 py-1 border hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100"
               >
                 EXPLORER LES <br /> DIFFERENTS MODELES
               </button>
