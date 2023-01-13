@@ -307,13 +307,21 @@ function Home() {
           </div>
 
           {/* ************************************************** */}
-          <div className="text-center">
+          <div className="text-center flex flex-col">
             <NavLink to="/vehiculelist">
               <button
                 type="button"
                 className="bg-blue-800 buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-1 py-1  hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100 border-2"
               >
                 EXPLORER LES <br /> DIFFERENTS MODELES
+              </button>
+            </NavLink>
+            <NavLink to="/admin">
+              <button
+                type="button"
+                className="bg-red-700 buttonExplorer text-white text-center mb-24 font-medium rounded-lg text-lg px-1 py-1  hover:scale-105 duration-300 border-black opacity-50 hover:opacity-100 border-2"
+              >
+                Admin ?<br />
               </button>
             </NavLink>
           </div>

@@ -8,8 +8,8 @@ function Welcome() {
       <div className="réservationStart text-lg">
         <div className="containerImageCar text-center">
           <div className="frameWelcome flex justify-center items-center">
-            <h1 className="text-white text-2xl pl-8 pr-8">
-              BIENVENUE SUR CARGOWHEELS
+            <h1 className="text-white text-4xl pl-8 pr-8">
+              BIENVENUE SUR <br /> CAR-GO WILD
               <p className="text-base mt-4">
                 le site de réservation de voiture numéro uno
               </p>
