@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Car1 from "../assets/car1.jpg";
 import Berline1 from "../assets/berline1.png";
@@ -8,6 +8,27 @@ import "../styles/Home.css";
 import Navbar from "../components/Navbar";
 
 function Home() {
+  const [isSelected1, setIselected1] = useState(false);
+  const [isSelected2, setIselected2] = useState(false);
+  const [isSelected3, setIselected3] = useState(false);
+  const handleClickSelected1 = () => setIselected1(!isSelected1);
+  const handleClickSelected2 = () => setIselected2(!isSelected2);
+  const handleClickSelected3 = () => setIselected3(!isSelected3);
+
+  const styles1 = {
+    border: isSelected1 ? "2px solid black" : "none",
+    background: isSelected1 ? "#B6D8F2" : "none",
+    color: isSelected1 ? "blue" : "none",
+  };
+  const styles2 = {
+    border: isSelected2 ? "2px solid black" : "none",
+    background: isSelected2 ? "#B6D8F2" : "none",
+  };
+  const styles3 = {
+    border: isSelected3 ? "2px solid black" : "none",
+    background: isSelected3 ? "#B6D8F2" : "none",
+  };
+
   return (
     <div>
       {/* **************************** */}
@@ -24,9 +45,10 @@ function Home() {
               <p className="text-center text-2xl">Type de véhicule</p>
             </div>
 
-            <div className="mb-8 justify-around flex mt-5 bg-gray-300 h-24 ml-4 mr-4 px-4 rounded-2xl ">
-              <div className="flex-col ml-2 w-1/3">
+            <div className=" mb-8 justify-around flex mt-5 bg-gray-300 h-24 ml-4 mr-4 px-4 rounded-2xl ">
+              <div className="flex-col ml-2 w-1/3" style={styles1}>
                 <button
+                  onClick={handleClickSelected1}
                   className="w-16 h-16 text-xl text-red-900 border-black "
                   type="button"
                 >
@@ -39,27 +61,38 @@ function Home() {
                   />
                 </button>
               </div>
-
-              <div className="flex-col w-1/3">
-                <button className="w-12 text-xl text-red-900" type="button">
+              <div className="flex-col w-1/3" style={styles2}>
+                <button
+                  className="w-12 text-xl text-red-900"
+                  type="button"
+                  onClick={handleClickSelected2}
+                >
                   {" "}
                   Utilitaire
-                  <img
-                    className="h-12 w-10 mt-5"
-                    src="./src/assets/utilitaire.svg"
-                    alt="utilitaire"
-                  />
+                  <div className="relative">
+                    <img
+                      className="absolute -right-2.5 h-12 w-10 mt-5"
+                      src="./src/assets/utilitaire.svg"
+                      alt="utilitaire"
+                    />
+                  </div>
                 </button>
               </div>
-              <div className="flex-col w-1/3">
-                <button className="w-10 text-xl text-red-900" type="button">
+              <div className="flex-col w-1/3" style={styles3}>
+                <button
+                  className="w-10 text-xl text-red-900"
+                  type="button"
+                  onClick={handleClickSelected3}
+                >
                   {" "}
                   Electrique
-                  <img
-                    className="h-16 w-16 mt-2"
-                    src="./src/assets/carelectric.svg"
-                    alt="berline"
-                  />
+                  <div className="relative">
+                    <img
+                      className="absolute -right-5 h-16 w-16 mt-2"
+                      src="./src/assets/carelectric.svg"
+                      alt="berline"
+                    />
+                  </div>
                 </button>
               </div>
             </div>
@@ -112,13 +145,14 @@ function Home() {
                   id="email"
                 />
               </div>
-
-              <button
-                type="submit"
-                className=" h-14 w-44 mt-10 bg-green-600 opacity-60 hover:opacity-100 hover:text-white bg-red-900 text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
-              >
-                Rechercher
-              </button>
+              <NavLink to="/vehiculeList">
+                <button
+                  type="submit"
+                  className=" h-14 w-44 mt-10 bg-green-600 opacity-60 hover:opacity-100 hover:text-white  text-white border-solid border-2 rounded-lg hover:scale-105 duration-300 border-black"
+                >
+                  Rechercher
+                </button>
+              </NavLink>
               <br />
             </div>
           </form>
